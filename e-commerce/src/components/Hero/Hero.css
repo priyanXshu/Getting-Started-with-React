@@ -1,0 +1,119 @@
+#hero{
+    padding: 0 0 9rem;
+}
+
+.hero-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.hero-left{
+    position: relative;
+    top: 11rem;
+}
+
+.hero-left p{
+    margin: 1rem 0;
+}
+
+.hero-stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 3rem;
+    width: 60%;
+}
+
+.stat-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-box>span:first-child{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-box span p{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.stat-box>span:last-child{
+    font-size: .88rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.hero-right{
+    background: url(./bg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(90vh - 9rem);
+    position: relative;
+}
+
+.hero-right>img{
+    position: relative;
+    max-width: 380px;
+}
+
+.hero-right-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: absolute;
+    bottom: -3rem;
+}
+
+.selection-card img{
+    height: 111px;
+    width: 111px;
+    padding: 1rem;
+    background: url(./bgthumbnail.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
+
+.border-primary{
+    border: var(--border-2);
+    border-color: hsla(244, 74%, 68%, 0.4);
+    border-radius: var(--border-radius-1);
+}
+
+.border-transparent{
+    border: var(--border-2);
+    border-color: transparent;
+}
+
+@media screen and (max-width: 1024px){
+    .hero-container{
+        grid-template-columns: 1fr;
+    }
+
+    .hero-left{
+        margin-bottom: 11rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .hero-stats{
+        width: 100%;
+    }
+
+    .hero-right-container{
+        gap: 0.5rem;
+    }
+
+    .hero-right{
+        height: calc(80vh - 8rem);
+    }
+}
